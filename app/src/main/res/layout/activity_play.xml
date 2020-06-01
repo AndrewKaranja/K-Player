@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4edfd"
+    tools:context=".PlayActivity">
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imageBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/shadow_circle_view"
+        android:src="@drawable/ic_arrow_back"
+        android:elevation="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat"
+        android:paddingTop="20dp"
+        android:text="PLAYING NOW"
+        android:textColor="#8FA0BB"
+        android:textSize="15dp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imagePlaylist"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shadow_circle_view"
+        android:src="@drawable/ic_playlist"
+        android:elevation="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/pinksky"
+        android:elevation="30dp"
+        app:civ_border_width="9dp"
+        app:civ_border_color="#e4edfd"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/songNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#323842"
+                android:textSize="20dp"
+                android:text="Song"/>
+            <TextView
+                android:id="@+id/artistNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#8FA0BB"
+                android:textSize="15dp"
+                android:text="Unknown Artist"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playBackView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/currentPosition2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="00:00"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/songDuration2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textAlignment="textEnd"
+                android:text="9:99"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <SeekBar
+
+            android:progress="20"
+            android:id="@+id/seekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imagePlay2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/ic_pause"
+            android:elevation="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
